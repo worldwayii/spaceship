@@ -1,11 +1,16 @@
+import ui.GameView;
 import model.Grid;
 
 public class Main {
 
+
+
     public static void main(String[] args) {
+
+        GameView view = new GameView();
         Grid grid = new Grid();
-        System.out.println();
-        System.out.println();
-        System.out.println(grid.getNeighboursFor(1,1));
+
+        view.init();
+
     }
 }

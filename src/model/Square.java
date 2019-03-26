@@ -6,18 +6,10 @@ public class Square {
 
 	private final int xLoc;
 	private final int yLoc;
-	ArrayList <EnemyShip> ships = new ArrayList<EnemyShip> ();
-	MasterShip theMasterShip = null;
-	int number;
 
 	public Square(int xLoc, int yLoc) {
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
-	}
-
-
-	public ArrayList<EnemyShip> getShips() {
-		return ships;
 	}
 
 	public int getxLoc() {
@@ -26,10 +18,6 @@ public class Square {
 
 	public int getyLoc() {
 		return yLoc;
-	}
-
-	public MasterShip getTheMasterShip() {
-		return theMasterShip;
 	}
 
 	@Override

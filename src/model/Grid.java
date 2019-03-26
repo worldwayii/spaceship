@@ -6,14 +6,19 @@ import java.util.List;
 public class Grid {
 
     private List<List<Square>> grid;
-    private final int GRID_SIZE = 4;
+    public static final int GRID_SIZE = 4; //sets the size of the grid
+    private MasterShip master;
+    List <EnemyShip> ships = new ArrayList<EnemyShip> ();
 
 
     public Grid() {
         grid = createEmptyGrid();
+        master = new MasterShip();
     }
 
-    private List<List<Square>> createEmptyGrid() {
+
+    // This method create and empty grid
+    private static List<List<Square>> createEmptyGrid() {
         List<List<Square>> mat = new ArrayList<>(GRID_SIZE);
 
         for (int i = 0; i < 4; i++) {
@@ -28,15 +33,26 @@ public class Grid {
     }
 
     public List<EnemyShip> getShipsOnSquare(int xLoc, int yLoc){
-        return grid.get(xLoc).get(yLoc).getShips();
+        List<EnemyShip> shipsAtLoc = new ArrayList<>();
+        for(int i = 0; i < ships.size(); i++){
+            if(xLoc == ships.get(i).getxLoc() && yLoc == ships.get(i).getyLoc()) shipsAtLoc.add(ships.get(i));
+        }
+        return shipsAtLoc;
     }
 
-    public boolean isMasterShipOn(int xLoc, int yLoc){
-        return grid.get(xLoc).get(yLoc).getTheMasterShip() != null;
+    public boolean isMasterShipAt(int xLoc, int yLoc){
+        return master.getxLoc() == xLoc && master.getyLoc() == yLoc;
     }
 
     public List<Square> getNeighboursFor(int xLoc, int yLoc){
         List<Square> neighbors = new ArrayList<>();
+
+        if(xLoc == -1 || yLoc == -1){
+            neighbors.add(grid.get(0).get(0));
+            return neighbors;
+        }
+
+
         // calculate teh range of squares that can be moved to
         int minX = xLoc > 0 ? xLoc - 1 : xLoc;
         int maxX = xLoc < GRID_SIZE - 1 ? xLoc + 1 : xLoc;
@@ -54,9 +70,55 @@ public class Grid {
         return neighbors;
     }
 
+    public void moveMasterShip(int xLoc, int yLoc){
+        // check whether the ship is being moved to a valid neighborhood square
+        boolean movable = isMovableTo(master.getxLoc(), master.getyLoc(), xLoc, yLoc);
+        if(!movable) return;
 
-    public void moveShip(EnemyShip aShip, int xLoc, int yLoc){
+        master.setxLoc(xLoc);
+        master.setyLoc(yLoc);
+    }
+
+    private boolean isMovableTo(int currentX, int currentY, int newX, int newY){
+        List<Square> neighborhoods = getNeighboursFor(currentX, currentY);
+        boolean found = false;
+        for (int i = 0; i < neighborhoods.size(); i++){
+            if(neighborhoods.get(i).getxLoc() == newX
+                    && neighborhoods.get(i).getyLoc() == newY){
+                found = true;
+                break;
+            }
+        }
+        return found;
+    }
+
+
+    public void moveShip(EnemyShip ship, int xLoc, int yLoc){
+
+        if(ship == null) return;
+
+        // check whether the ship is being moved to a valid neighborhood square
+        boolean movable = isMovableTo(ship.getxLoc(), ship.getyLoc(), xLoc, yLoc);
+        if(!movable) return;
+
+        int pos = ships.indexOf(ship);
+
+        ship.setxLoc(xLoc);
+        ship.setyLoc(yLoc);
+        if(pos != -1){
+            ships.set(pos, ship);
+        } else {
+            ships.add(ship);
+        }
 
     }
 
+
+    @Override
+    public String toString() {
+        return "Grid{" +
+                "master=" + master +
+                ", ships=" + ships +
+                '}';
+    }
 }
