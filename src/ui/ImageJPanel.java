@@ -28,7 +28,7 @@ public class ImageJPanel extends JPanel {
         super.paintComponent(g);
         BufferedImage image = null;
         try {
-            String path = imagePath != null && !imagePath.isBlank() ? imagePath : "images/ship.png";
+            String path = imagePath != null && !imagePath.isEmpty() ? imagePath : "images/ship.png";
             image = ImageIO.read(new File(path));
             g.drawImage(image, 0, 0, 50, 50, null);
         } catch (IOException e) {

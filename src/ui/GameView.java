@@ -65,14 +65,14 @@ public class GameView {
     private void subscribeToViewModel() {
         viewModel.getGrid().observe(grid -> {
             if(grid == null) return;
-            mPanel.removeAll();
+            
             List<List<Square>> squares = grid.getGrid();
             MasterShip master = grid.getMasterShip();
 
             for(int i = 0; i < squares.size(); i++){
                 for(int j = 0; j < squares.get(i).size(); j++){
                     JPanel square = mSquares.get(i).get(j);
-
+                    square.removeAll();
 
                     if(master.getxLoc() == i && master.getyLoc() == j){
                         System.out.println("Master at: " + squares.get(i).get(j));
@@ -84,9 +84,9 @@ public class GameView {
 
                         ImageJPanel imageJPanel = new ImageJPanel();
                         imageJPanel.setImagePath(path);
-                        imageJPanel.setBackground(new Color(0f,0f,0f,1f ));
+                        imageJPanel.setBackground(new Color(0f,0f,0f,0f ));
 
-                        square.add(new JLabel("See ya"));
+                        square.add(imageJPanel);
                         square.revalidate();
                         square.repaint();
                     }
