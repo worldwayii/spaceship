@@ -8,7 +8,7 @@ public class Grid {
     private List<List<Square>> grid;
     public static final int GRID_SIZE = 4; //sets the size of the grid
     private MasterShip master;
-    List <EnemyShip> ships = new ArrayList<EnemyShip> ();
+    private List <EnemyShip> ships = new ArrayList<EnemyShip> ();
 
 
     public Grid() {
@@ -18,7 +18,7 @@ public class Grid {
 
 
     // This method create and empty grid
-    private static List<List<Square>> createEmptyGrid() {
+    private List<List<Square>> createEmptyGrid() {
         List<List<Square>> mat = new ArrayList<>(GRID_SIZE);
 
         for (int i = 0; i < 4; i++) {
@@ -113,6 +113,9 @@ public class Grid {
 
     }
 
+    public List<List<Square>> getGrid() {
+        return grid;
+    }
 
     @Override
     public String toString() {
@@ -120,5 +123,9 @@ public class Grid {
                 "master=" + master +
                 ", ships=" + ships +
                 '}';
+    }
+
+    public MasterShip getMasterShip() {
+        return master;
     }
 }

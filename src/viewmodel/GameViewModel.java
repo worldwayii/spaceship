@@ -2,8 +2,11 @@ package viewmodel;
 
 import model.EnemyShip;
 import model.Grid;
+import model.Square;
 import rx.MutableObservable;
 import rx.Observable;
+
+import java.util.List;
 
 public class GameViewModel {
 
@@ -42,7 +45,5 @@ public class GameViewModel {
 
     private void start(){
         this.grid.setValue(new Grid());
-        masterWins.setValue(false);
-        enemyWins.setValue(false);
     }
 }
