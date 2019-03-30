@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7a200f1-c2f2-496b-b9dd-50827f31810a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ui/ImageCanvas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/ImageJPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpaceShip/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceShip/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpaceShip/model/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceShip/model/Grid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpaceShip/ui/GameView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceShip/ui/GameView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpaceShip/viewmodel/GameViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceShip/viewmodel/GameViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/GameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viewmodel/GameViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/GameViewModel.java" afterDir="false" />
-    </list>
+    <list default="true" id="f7a200f1-c2f2-496b-b9dd-50827f31810a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ui/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+            <state relative-caret-position="270">
+              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -208,7 +196,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553919717501" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553933315757" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -271,7 +259,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="742" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -282,12 +269,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27384615" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27384615" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3287037" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3271605" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32615384" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3287037" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.13384615" />
@@ -551,8 +538,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+        <state relative-caret-position="270">
+          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
